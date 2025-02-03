@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.POS.Presentation", "ERP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.POS.Domain", "ERP.POS.Domain\ERP.POS.Domain.csproj", "{BBB6C059-23C1-44B0-93F2-B11E22314C8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.POS.Repository", "ERP.POS.Repository\ERP.POS.Repository.csproj", "{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BBB6C059-23C1-44B0-93F2-B11E22314C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBB6C059-23C1-44B0-93F2-B11E22314C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBB6C059-23C1-44B0-93F2-B11E22314C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

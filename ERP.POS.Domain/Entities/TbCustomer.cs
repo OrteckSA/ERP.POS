@@ -12,6 +12,6 @@ namespace ERP.POS.Domain.Entities
         public decimal MaximumSales { get; set; }
         public Guid ReferenceId { get; set; }
 
-        public virtual ICollection<TbCustomerBranch> Branches { get; set; } = new List<TbCustomerBranch>();
+        public virtual ICollection<TbCustomerBranch> CustomerBranches { get; set; } = new List<TbCustomerBranch>();
     }
 }
