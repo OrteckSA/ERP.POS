@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace ERP.POS.Domain.IRepository
+namespace ERP.POS.Domain.Common.IRepository
 {
     public interface IRepository<TEntity> where TEntity : class
     {
@@ -40,5 +40,4 @@ namespace ERP.POS.Domain.IRepository
         Task SoftDeleteAsync(Expression<Func<TEntity, bool>> filter);
         #endregion
     }
-
 }

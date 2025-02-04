@@ -1,5 +1,5 @@
 ﻿using ERP.POS.Domain.Common.Interfaces;
-using ERP.POS.Domain.IRepository;
+using ERP.POS.Domain.Common.IRepository;
 using ERP.POS.Repository.EntityFrameworkCore.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
