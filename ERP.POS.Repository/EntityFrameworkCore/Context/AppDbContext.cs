@@ -15,7 +15,7 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.; Database=PosDemo; Trusted_Connection=True; TrustServerCertificate=True");
+            optionsBuilder.UseSqlite("Server=.; Database=PosDemo; Trusted_Connection=True; TrustServerCertificate=True");
 
             base.OnConfiguring(optionsBuilder);
         }

@@ -15,13 +15,13 @@ namespace ERP.POS.Repository.Migrations
                 name: "Customers",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Number = table.Column<int>(type: "int", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    LatinName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    DiscRatio = table.Column<float>(type: "real", nullable: false),
-                    MaximumSales = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
-                    ReferenceId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Number = table.Column<int>(type: "INTEGER", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
+                    LatinName = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
+                    DiscRatio = table.Column<float>(type: "REAL", nullable: false),
+                    MaximumSales = table.Column<decimal>(type: "TEXT", precision: 18, scale: 2, nullable: false),
+                    ReferenceId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,9 +32,9 @@ namespace ERP.POS.Repository.Migrations
                 name: "CustomerBranches",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CustomerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    CustomerId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
