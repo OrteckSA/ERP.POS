@@ -20,7 +20,7 @@ namespace ERP.POS.Repository.Migrations
                     Name = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
                     LatinName = table.Column<string>(type: "TEXT", maxLength: 255, nullable: false),
                     DiscRatio = table.Column<float>(type: "REAL", nullable: false),
-                    MaximumSales = table.Column<decimal>(type: "TEXT", precision: 18, scale: 2, nullable: false),
+                    MaximumSales = table.Column<decimal>(type: "REAL", nullable: false),
                     ReferenceId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

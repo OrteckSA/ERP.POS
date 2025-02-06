@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ERP.POS.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250204123641_CreateCustomerTables")]
+    [Migration("20250206041210_CreateCustomerTables")]
     partial class CreateCustomerTables
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace ERP.POS.Repository.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
 
-            modelBuilder.Entity("ERP.POS.Domain.Entities.TbCustomer", b =>
+            modelBuilder.Entity("ERP.POS.Domain.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -35,8 +35,7 @@ namespace ERP.POS.Repository.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("MaximumSales")
-                        .HasPrecision(18, 2)
-                        .HasColumnType("TEXT");
+                        .HasColumnType("REAL");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -51,10 +50,10 @@ namespace ERP.POS.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Customers", (string)null);
+                    b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("ERP.POS.Domain.Entities.TbCustomerBranch", b =>
+            modelBuilder.Entity("ERP.POS.Domain.Entities.CustomerBranch", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -72,12 +71,12 @@ namespace ERP.POS.Repository.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("CustomerBranches", (string)null);
+                    b.ToTable("CustomerBranches");
                 });
 
-            modelBuilder.Entity("ERP.POS.Domain.Entities.TbCustomerBranch", b =>
+            modelBuilder.Entity("ERP.POS.Domain.Entities.CustomerBranch", b =>
                 {
-                    b.HasOne("ERP.POS.Domain.Entities.TbCustomer", "Customer")
+                    b.HasOne("ERP.POS.Domain.Entities.Customer", "Customer")
                         .WithMany("CustomerBranches")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -86,7 +85,7 @@ namespace ERP.POS.Repository.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("ERP.POS.Domain.Entities.TbCustomer", b =>
+            modelBuilder.Entity("ERP.POS.Domain.Entities.Customer", b =>
                 {
                     b.Navigation("CustomerBranches");
                 });

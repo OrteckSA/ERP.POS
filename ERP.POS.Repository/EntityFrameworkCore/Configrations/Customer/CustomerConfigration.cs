@@ -18,7 +18,7 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customer
                 .HasMaxLength(255);
 
             builder.Property(x => x.MaximumSales)
-                .HasPrecision(18, 2)
+                .HasColumnType("REAL") // Force SQLite to store it as a floating-point number
                 .IsRequired();
 
             builder.HasMany(x => x.CustomerBranches)
