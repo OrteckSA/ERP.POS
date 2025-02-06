@@ -3,7 +3,7 @@ using ERP.POS.Domain.Common.Interfaces;
 
 namespace ERP.POS.Domain.Entities
 {
-    public class TbCustomer : BaseEntity, INumberEntity
+    public class Customer : BaseEntity, INumberEntity
     {
         public int Number { get; set; }
         public string Name { get; set; } = null!;
@@ -12,6 +12,6 @@ namespace ERP.POS.Domain.Entities
         public decimal MaximumSales { get; set; }
         public Guid ReferenceId { get; set; }
 
-        public virtual ICollection<TbCustomerBranch> CustomerBranches { get; set; } = new List<TbCustomerBranch>();
+        public virtual ICollection<CustomerBranch> CustomerBranches { get; set; } = new List<CustomerBranch>();
     }
 }

@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customer
 {
-    internal class CustomerBranchConfigration : IEntityTypeConfiguration<TbCustomerBranch>
+    internal class CustomerBranchConfigration : IEntityTypeConfiguration<CustomerBranch>
     {
-        public void Configure(EntityTypeBuilder<TbCustomerBranch> builder)
+        public void Configure(EntityTypeBuilder<CustomerBranch> builder)
         {
             builder.HasKey(x => x.Id);
 
@@ -19,8 +19,6 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customer
                 .HasForeignKey(x => x.CustomerId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
-
-            builder.ToTable("CustomerBranches");
         }
     }
 }

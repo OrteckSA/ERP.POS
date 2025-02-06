@@ -9,13 +9,13 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Context
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         #region Entities
-        public virtual DbSet<TbCustomer> Customers { get; set; }
-        public virtual DbSet<TbCustomerBranch> CustomerBranches { get; set; }
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<CustomerBranch> CustomerBranches { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Server=.; Database=PosDemo; Trusted_Connection=True; TrustServerCertificate=True");
+            optionsBuilder.UseSqlite("Data Source=PosDemo.db");
 
             base.OnConfiguring(optionsBuilder);
         }
