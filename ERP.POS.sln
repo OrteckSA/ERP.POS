@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.POS.Domain", "ERP.POS.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.POS.Repository", "ERP.POS.Repository\ERP.POS.Repository.csproj", "{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.POS.Service", "ERP.POS.Service\ERP.POS.Service.csproj", "{FC82128B-1C9B-4A41-870B-49871C0DED2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{3CAB037C-7AC4-4B84-93D3-955B471BD3F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AE0C820-E8F7-4674-A6B9-7DD22D614C03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC82128B-1C9B-4A41-870B-49871C0DED2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC82128B-1C9B-4A41-870B-49871C0DED2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC82128B-1C9B-4A41-870B-49871C0DED2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC82128B-1C9B-4A41-870B-49871C0DED2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CAB037C-7AC4-4B84-93D3-955B471BD3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CAB037C-7AC4-4B84-93D3-955B471BD3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CAB037C-7AC4-4B84-93D3-955B471BD3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CAB037C-7AC4-4B84-93D3-955B471BD3F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customer
+namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customers
 {
     internal class CustomerBranchConfigration : IEntityTypeConfiguration<CustomerBranch>
     {

@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customer
+namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customers
 {
-    internal class CustomerConfigration : IEntityTypeConfiguration<Domain.Entities.Customer>
+    internal class CustomerConfigration : IEntityTypeConfiguration<Customer>
     {
-        public void Configure(EntityTypeBuilder<Domain.Entities.Customer> builder)
+        public void Configure(EntityTypeBuilder<Customer> builder)
         {
             builder.HasKey(x => x.Id);
 
@@ -18,7 +18,7 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customer
                 .HasMaxLength(255);
 
             builder.Property(x => x.MaximumSales)
-                .HasColumnType("REAL") // Force SQLite to store it as a floating-point number
+                .HasColumnType("REAL")
                 .IsRequired();
 
             builder.HasMany(x => x.CustomerBranches)
