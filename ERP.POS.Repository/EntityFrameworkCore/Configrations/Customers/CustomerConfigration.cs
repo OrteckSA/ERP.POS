@@ -18,7 +18,6 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Customers
                 .HasMaxLength(255);
 
             builder.Property(x => x.MaximumSales)
-                .HasColumnType("REAL")
                 .IsRequired();
 
             builder.HasMany(x => x.CustomerBranches)

@@ -20,47 +20,10 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Configrations.Bills
                 .IsRequired();
 
             builder.Property(x => x.Price)
-                .HasColumnType("REAL")
                 .IsRequired();
 
             builder.Property(x => x.TaxRatio)
-                .HasColumnType("REAL")
                 .IsRequired();
-
-            builder.OwnsOne(x => x.Discount, discount =>
-            {
-                discount.Property(x => x.Ratio)
-                    .HasColumnName("DiscountRatio")
-                    .HasColumnType("REAL")
-                    .IsRequired();
-                discount.Property(x => x.Value)
-                    .HasColumnName("DiscountValue")
-                    .HasColumnType("REAL")
-                    .IsRequired();
-            });
-
-            builder.OwnsOne(x => x.Extra, extra =>
-            {
-                extra.Property(x => x.Ratio)
-                    .HasColumnName("ExtraRatio")
-                    .HasColumnType("REAL")
-                    .IsRequired();
-                extra.Property(x => x.Value)
-                    .HasColumnName("ExtraValue")
-                    .HasColumnType("REAL")
-                    .IsRequired();
-            });
-
-            builder.OwnsOne(x => x.Measurement, measurement =>
-            {
-                measurement.Property(x => x.Unit)
-                    .IsRequired()
-                    .HasMaxLength(255);
-
-                measurement.Property(x => x.UnitValue)
-                    .HasColumnType("REAL")
-                    .IsRequired();
-            });
 
             builder.HasOne(x => x.Bill)
                 .WithMany(x => x.BillItems)

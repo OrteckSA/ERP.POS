@@ -15,11 +15,9 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Configrations
                 .HasMaxLength(255);
 
             builder.Property(x => x.Price)
-                .HasColumnType("REAL")
                 .IsRequired();
 
             builder.Property(x => x.Tax)
-                .HasColumnType("REAL")
                 .IsRequired();
         }
     }

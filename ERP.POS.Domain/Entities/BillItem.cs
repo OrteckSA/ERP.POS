@@ -1,6 +1,4 @@
 ﻿using ERP.POS.Domain.Common;
-using ERP.POS.Domain.Entities.OwnedEntities;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ERP.POS.Domain.Entities
 {
@@ -13,9 +11,12 @@ namespace ERP.POS.Domain.Entities
         public decimal TaxRatio { get; set; }
 
         #region Owned Entities
-        public Discount Discount { get; set; } = null!;
-        public Extra Extra { get; set; } = null!;
-        public Measurement Measurement { get; set; } = null!;
+        public decimal DiscountValue { get; set; }
+        public decimal DiscountRatio { get; set; }
+        public decimal ExtraValue { get; set; }
+        public decimal ExtraRatio { get; set; }
+        public string Unit { get; set; } = null!;
+        public decimal UnitValue { get; set; }
         #endregion
 
         #region Navigation Properties

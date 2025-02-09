@@ -15,7 +15,6 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Configrations
                 .HasMaxLength(255);
 
             builder.Property(x => x.Rate)
-                .HasColumnType("REAL")
                 .IsRequired();
         }
     }

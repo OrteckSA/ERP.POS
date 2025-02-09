@@ -20,7 +20,7 @@ namespace ERP.POS.Repository.EntityFrameworkCore.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=PosDemo.db");
+            optionsBuilder.UseSqlite("Data Source=D:\\PosDemo.db");
 
             base.OnConfiguring(optionsBuilder);
         }

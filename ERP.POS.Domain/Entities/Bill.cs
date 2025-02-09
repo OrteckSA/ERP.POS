@@ -1,5 +1,4 @@
 ﻿using ERP.POS.Domain.Common;
-using ERP.POS.Domain.Entities.OwnedEntities;
 
 namespace ERP.POS.Domain.Entities
 {
@@ -10,11 +9,10 @@ namespace ERP.POS.Domain.Entities
         public Guid CurrencyId { get; set; }
         public decimal CurrencyValue { get; set; }
         public decimal TaxRatio { get; set; }
-
-        #region Owned Entities
-        public Discount Discount { get; set; } = null!;
-        public Extra Extra { get; set; } = null!;
-        #endregion
+        public decimal DiscountValue { get; set; }
+        public decimal DiscountRatio { get; set; }
+        public decimal ExtraValue { get; set; }
+        public decimal ExtraRatio { get; set; }
 
         #region Navigation Properties
         public virtual Store Store { get; set; } = null!;
