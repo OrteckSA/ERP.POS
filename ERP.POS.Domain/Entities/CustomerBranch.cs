@@ -7,6 +7,6 @@ namespace ERP.POS.Domain.Entities
         public Guid CustomerId { get; set; }
         public string Name { get; set; } = null!;
 
-        public virtual Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; } = null!;
     }
 }

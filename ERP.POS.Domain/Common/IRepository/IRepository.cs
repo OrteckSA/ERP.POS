@@ -4,6 +4,7 @@ namespace ERP.POS.Domain.Common.IRepository
 {
     public interface IRepository<TEntity> where TEntity : class
     {
+        IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties);
         #region Get
         Task<TEntity?> GetAsync(Expression<Func<TEntity, bool>> filter);
         TEntity? Get(Expression<Func<TEntity, bool>> filter);

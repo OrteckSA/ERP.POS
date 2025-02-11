@@ -1,9 +1,8 @@
-﻿using ERP.POS.Domain.Common;
-
-namespace ERP.POS.Domain.Entities
+﻿namespace ERP.POS.Domain.DTOs
 {
-    public class BillItem : BaseEntity
+    public class BillItemDto
     {
+        public Guid Id { get; set; }
         public Guid BillId { get; set; }
         public Guid MaterialId { get; set; }
         public int Quantity { get; set; }
@@ -17,8 +16,8 @@ namespace ERP.POS.Domain.Entities
         public decimal UnitValue { get; set; }
 
         #region Navigation Properties
-        public virtual Bill Bill { get; set; } = null!;
-        public virtual Material Material { get; set; } = null!;
+        // public BillDto Bill { get; set; } = null!;
+        public MaterialDto Material { get; set; } = null!;
         #endregion
     }
 }

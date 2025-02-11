@@ -17,7 +17,22 @@ namespace ERP.POS.Repository.Repository
             _dbSet = context.Set<TEntity>();
         }
 
-        public IQueryable<TEntity> Table => _dbSet;
+        public IQueryable<TEntity> Table => _dbSet.AsQueryable();
+
+        public IQueryable<TEntity> Include(params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            IQueryable<TEntity> query = _dbSet;
+            foreach (var includeProperty in includeProperties)
+                query = query.Include(includeProperty);
+            return query;
+        }
+
+        public IQueryable<TEntity> ThenInclude<TSubEntity>(Expression<Func<TEntity, TSubEntity>> include, Expression<Func<TSubEntity, object>> thenInclude)
+        {
+            IQueryable<TEntity> query = _dbSet;
+            var includedQuery = query.Include(include);
+            return includedQuery.ThenInclude(thenInclude);
+        }
 
         #region Get
         public TEntity? Get(Expression<Func<TEntity, bool>> filter)
